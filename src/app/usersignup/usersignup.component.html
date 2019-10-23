@@ -1,1 +1,21 @@
-<p>usersignup works!</p>
+<form [formGroup]="userSignupForm" (ngSubmit)="onSubmit()">
+
+<label>
+    UserName:
+    <input type="text" formControlName="userName">
+</label><br>
+<label>
+    Password:
+    <input type="password" formControlName="pw">
+</label>
+<br>
+<label>
+    Email:
+    <input type="text" formControlName="emailAddress">
+</label>
+<br>
+<button type="submit" [disabled]="!userSignupForm.valid">Submit</button>
+</form>
+<p>
+    Form Status: {{ userSignupForm.status }}
+  </p>
