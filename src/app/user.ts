@@ -11,4 +11,10 @@ export class User {
  mic: Boolean;
  discordName: String;
  steamName: String;    
+ constructor(userName:String,pw:String,emailAddress:String){
+     this.userName=userName;
+     this.pw=pw;
+     this.emailAddress=emailAddress;
+
+ }
 }
